@@ -24,14 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("sss", $meno, $email, $sprava);
 
         if ($stmt->execute()) {
-            $to = 'info@hsf.sk';
+            $to = 'o.stefik@ostrovskeho.com';
             $subject = 'Nová správa z kontaktného formulára HSF';
             $message = "Meno: $meno\nE-mail: $email\n\nSpráva:\n$sprava";
-            $headers = "From: $email";
 
-            @mail($to, $subject, $message, $headers);
+            $headers = "From: web@ostrovskeho.com\r\n";
+            $headers .= "Reply-To: $email\r\n";
+            $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-            $success = 'Správa bola úspešne odoslaná a uložená.';
+            if (mail($to, $subject, $message, $headers)) {
+                $success = 'Správa bola úspešne odoslaná a uložená.';
+            } else {
+                $success = 'Správa bola uložená do databázy, ale e-mail sa nepodarilo odoslať.';
+            }
         } else {
             $errors[] = 'Nastala chyba pri odosielaní formulára.';
         }

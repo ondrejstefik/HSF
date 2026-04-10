@@ -29,7 +29,7 @@
 <section class="section">
     <div class="container">
         <div class="section-heading">
-            <h2>Používané techniky</h2>
+            <h2>Katalóg používaných techník</h2>
             <p>Pri tvorbe využívame tradičné remeselné postupy aj dekoratívne techniky, ktoré dávajú každému výrobku originálny charakter.</p>
         </div>
 
