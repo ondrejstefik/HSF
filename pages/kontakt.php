@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<section class="page-hero">
+<section class="page-hero telephone-hero">
     <div class="container">
         <h1>Kontakt</h1>
         <p>Máte záujem o výrobok, cenovú ponuku alebo individuálnu realizáciu? Napíšte nám.</p>

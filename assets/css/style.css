@@ -217,6 +217,18 @@ ul {
     align-items: center;
 }
 
+.onas-hero {
+    background: url('../images/hero/onas_hero.webp') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.telephone-hero {
+    background: url('../images/hero/telephone_hero.webp') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
 .hero-buttons {
     display: flex;
     gap: 1rem;

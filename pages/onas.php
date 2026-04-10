@@ -1,4 +1,4 @@
-<section class="page-hero">
+<section class="page-hero onas-hero"> 
     <div class="container">
         <h1>O nás</h1>
         <p>Sme značka HSF zameraná na ručne robený slovenský nábytok s dôrazom na kvalitu, detail a prírodné materiály.</p>

@@ -4,16 +4,22 @@ require_once 'includes/db.php';
 
 $page = $_GET['page'] ?? 'home';
 
-$allowedPages = ['home', 'katalog', 'detail', 'onas', 'kontakt', 'realizacie'];
+$allowedPages = ['home', 'katalog', 'detail', 'onas', 'kontakt', 'realizacie', '404'];
 
 if (!in_array($page, $allowedPages, true)) {
-    $page = 'home';
+    http_response_code(404);
+    $page = '404';
 }
 
 include 'includes/header.php';
 include 'includes/nav.php';
 
 switch ($page) {
+
+    case 'home':
+        include 'pages/home.php';
+        break;
+
     case 'katalog':
         include 'pages/katalog.php';
         break;
@@ -34,8 +40,9 @@ switch ($page) {
         include 'pages/realizacie.php';
         break;
 
-    default:
-        include 'pages/home.php';
+   case '404':
+   default:
+        include 'pages/404.php';
         break;
 }
 
