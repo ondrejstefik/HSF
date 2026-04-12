@@ -40,10 +40,10 @@ else:
     <div class="container detail-grid">
         <div class="detail-image">
             <?php
-            $imagePath = __DIR__ . '/../assets/images/' . $produkt['hlavny_obrazok'];
+            $imagePath = __DIR__ . '/../assets/images/produkty/' . $produkt['hlavny_obrazok'];
             if (!empty($produkt['hlavny_obrazok']) && file_exists($imagePath)):
             ?>
-                <img src="assets/images/<?= htmlspecialchars($produkt['hlavny_obrazok']) ?>" alt="<?= htmlspecialchars($produkt['nazov']) ?>">
+                <img src="assets/images/produkty/<?= htmlspecialchars($produkt['hlavny_obrazok']) ?>" alt="<?= htmlspecialchars($produkt['nazov']) ?>">
             <?php else: ?>
                 <div class="no-image detail-no-image">Sem doplníš hlavný obrázok produktu</div>
             <?php endif; ?>
@@ -59,38 +59,84 @@ else:
                 <li><strong>Cena od:</strong> <?= number_format((float)$produkt['cena_od'], 2, ',', ' ') ?> €</li>
             </ul>
 
-            <div class="moridla-box">
-                <h3>Dostupné moridlá</h3>
+          <div class="moridla-box">
+            <h3>Dostupné moridlá</h3>
+            <p>
+                Tento výrobok je možné vyhotoviť vo viacerých odtieňoch moridla.
+                Pre zobrazenie vzoriek kliknite na tlačidlo nižšie.
+            </p>
 
-                <?php if ($moridlaResult && $moridlaResult->num_rows > 0): ?>
-                    <div class="stain-options">
-                        <?php
-                        $firstStain = null;
-                        $index = 0;
-                        while ($moridlo = $moridlaResult->fetch_assoc()):
-                            if ($index === 0) {
-                                $firstStain = $moridlo['nazov'];
-                            }
-                        ?>
-                            <label class="stain-chip">
-                                <input type="radio" name="moridlo" value="<?= htmlspecialchars($moridlo['nazov']) ?>" <?= $index === 0 ? 'checked' : '' ?>>
-                                <span class="stain-color" style="background-color: <?= htmlspecialchars($moridlo['hex_farba']) ?>;"></span>
-                                <span><?= htmlspecialchars($moridlo['nazov']) ?></span>
-                            </label>
-                        <?php
-                            $index++;
-                        endwhile;
-                        ?>
-                    </div>
-
-                    <p class="selected-stain">Vybrané moridlo: <strong id="selectedMoridlo"><?= htmlspecialchars($firstStain) ?></strong></p>
-                <?php else: ?>
-                    <p>Pre tento produkt zatiaľ nie sú definované moridlá.</p>
-                <?php endif; ?>
-            </div>
-
+            <button type="button" class="btn btn-secondary" id="openMoridlaModal">
+                Zobraziť moridlá
+            </button>
+        </div>
             <a href="index.php?page=kontakt" class="btn">Mám záujem o tento výrobok</a>
         </div>
     </div>
 </section>
+<div id="moridlaModal" class="moridla-modal">
+    <div class="moridla-modal-content">
+        <button type="button" class="moridla-close" id="closeMoridlaModal">&times;</button>
+
+        <h2>Dostupné moridlá</h2>
+        <p class="moridla-note-top">
+            Odtieň sa môže mierne líšiť podľa <strong>druhu dreva, kresby materiálu</strong> a svetelných podmienok fotografie.
+        </p>
+
+        <div class="moridla-grid">
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/dub-prirodny.webp" alt="Dub prírodný">
+                <h4>Dub prírodný</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/dub-svetly.webp" alt="Dub svetlý">
+                <h4>Dub svetlý</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/orech.webp" alt="Orech">
+                <h4>Orech</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/gastan.webp" alt="Gaštan">
+                <h4>Gaštan</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/wenge.webp" alt="Wenge">
+                <h4>Wenge</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/biela.webp" alt="Biela">
+                <h4>Biela</h4>
+            </div>
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/siva.webp" alt="Sivá">
+                <h4>Sivá</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/cierna.webp" alt="Čierna">
+                <h4>Čierna</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/teak.webp" alt="Teak">
+                <h4>Teak</h4>
+            </div>
+
+            <div class="moridlo-card">
+                <img src="assets/images/moridla/mahagon.webp" alt="Mahagón">
+                <h4>Mahagón</h4>
+            </div>
+        </div>
+
+        <p class="moridla-note-bottom">
+            <strong>Poznámka:</strong> Máte záujem o konkrétny odtieň? Uveďte ho pri odoslaní dopytu alebo nás kontaktujte.
+        </p>
+    </div>
+</div>
 <?php endif; ?>

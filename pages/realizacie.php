@@ -1,26 +1,67 @@
 <section class="page-hero realization-hero">
     <div class="container">
-        <h1>Realizácie</h1>
-        <p>Ukážka štýlu a smerovania našej tvorby.</p>
+        <h1>Filozofia značky HSF</h1>
+        <p>Poctivé remeslo, kvalitné materiály a dôraz na detail v každom výrobku.</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
+        <div class="section-heading">
+            <h2>Čo charakterizuje HSF</h2>
+            <p>Naše výrobky nevznikajú sériovo. Každý kus je výsledkom poctivej práce, výberu kvalitných materiálov a remeselného spracovania.</p>
+        </div>
+
+        <div class="features-grid brand-values-grid">
+            <article class="card brand-card">
+                <div class="brand-card-image">
+                    <img src="assets/images/SilverLOGOweb.webp" alt="Oceľová značka HSF">
+                </div>
+                <h3>Oceľová značka HSF</h3>
+                <p>Každý výrobok nesie rukopis našej značky. Oceľový emblém HSF symbolizuje pevnosť, kvalitu a jedinečný charakter ručne vyrábaného nábytku.</p>
+            </article>
+
+            <article class="card brand-card">
+                <div class="brand-card-image les-image">
+                    <img src="assets/images/les.webp" alt="Drevo zo slovenských lesov">
+                </div>
+                <h3>Drevo zo slovenských lesov</h3>
+                <p>Pri výrobe používame kvalitné masívne drevo zo slovenských lesov. Dôraz kladieme na prirodzenú kresbu materiálu, pevnosť a dlhú životnosť každého výrobku.</p>
+                
+            </article>
+
+            <article class="card brand-card">
+                <div class="brand-card-image eco-image">
+                    <img src="assets/images/eco-healthy.webp" alt="Prírodné a zdravotne nezávadné moridlá">
+                </div>
+                <h3>Prírodné a zdravotne nezávadné moridlá</h3>
+                <p>Povrchové úpravy volíme s ohľadom na prirodzený vzhľad dreva aj bezpečnosť pre používateľa. Používame kvalitné, zdravotne nezávadné a šetrné moridlá a oleje.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Naša výroba</h2>
+            <p>V HSF spájame tradičné remeslo s citom pre moderný aj rustikálny dizajn.</p>
+        </div>
+
         <div class="features-grid">
             <article class="card">
-                <h3>Jedálenský stôl do rodinného domu</h3>
-                <p>Dubový stôl s olejovaným povrchom a matnou kovovou podnožou v modernom interiéri.</p>
+                <h3>Ručné spracovanie</h3>
+                <p>Každý detail prechádza poctivým ručným opracovaním, vďaka čomu má výrobok osobitý charakter a vysokú remeselnú hodnotu.</p>
             </article>
 
             <article class="card">
-                <h3>Komoda do obývacej izby</h3>
-                <p>Kombinácia masívneho dreva a čistých línií s dôrazom na praktické úložné riešenie.</p>
+                <h3>Výroba na mieru</h3>
+                <p>Rozmery, odtieň dreva aj finálne prevedenie prispôsobujeme požiadavkám zákazníka a charakteru interiéru.</p>
             </article>
 
             <article class="card">
-                <h3>Konferenčný stolík na mieru</h3>
-                <p>Malosériový výrobok s jemne tmaveným moridlom a ručne opracovanou hranou.</p>
+                <h3>Dôraz na trvácnosť</h3>
+                <p>Našim cieľom nie je krátkodobý efekt, ale nábytok, ktorý bude pevný, funkčný a estetický aj po rokoch používania.</p>
             </article>
         </div>
     </div>

@@ -19,3 +19,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openBtn = document.getElementById('openMoridlaModal');
+    const closeBtn = document.getElementById('closeMoridlaModal');
+    const modal = document.getElementById('moridlaModal');
+
+    if (openBtn && closeBtn && modal) {
+        openBtn.addEventListener('click', function () {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn.addEventListener('click', function () {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+});
