@@ -24,29 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("sss", $meno, $email, $sprava);
 
         if ($stmt->execute()) {
-            $to = 'o.stefik@ostrovskeho.com';
-            $subject = 'Nová správa z kontaktného formulára HSF';
-            $message = "Meno: $meno\nE-mail: $email\n\nSpráva:\n$sprava";
-
-            $headers = "From: web@ostrovskeho.com\r\n";
-            $headers .= "Reply-To: $email\r\n";
-            $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-            if (mail($to, $subject, $message, $headers)) {
-                $success = 'Správa bola úspešne odoslaná a uložená.';
-            } else {
-                $success = 'Správa bola uložená do databázy, ale e-mail sa nepodarilo odoslať.';
-            }
+            $success = 'Správa bola úspešne odoslaná na spracovanie.';
         } else {
             $errors[] = 'Nastala chyba pri odosielaní formulára.';
         }
+
+        $stmt->close();
     }
 }
 ?>
 
 <section class="page-hero telephone-hero">
-    <div class="container">
-        <h1>Kontakt</h1>
+    <div class="container hero-content">
+        <h2>Kontakt</h2>
         <p>Máte záujem o výrobok, cenovú ponuku alebo individuálnu realizáciu? Napíšte nám.</p>
     </div>
 </section>

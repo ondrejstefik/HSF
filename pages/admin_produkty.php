@@ -11,14 +11,15 @@ $result = $conn->query($sql);
 ?>
 
 <section class="page-hero">
-    <div class="container">
-        <h1>Správa produktov</h1>
+    <div class="container hero-content">
+        <h2>Správa produktov</h2>
         <p>Jednoduchá administrácia produktov katalógu.</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
+        <h2>Zoznam produktov</h2>
         <p>
             <a href="index.php?page=produkt_pridat" class="btn">Pridať nový produkt</a>
             <a href="index.php?page=logout" class="btn btn-secondary">Odhlásiť sa</a>

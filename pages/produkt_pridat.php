@@ -78,8 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <section class="page-hero">
-    <div class="container">
-        <h1>Pridať nový produkt</h1>
+    <div class="container hero-content">
+        <h2>Pridať nový produkt</h2>
         <p>Vyplňte formulár a uložte nový produkt do katalógu.</p>
     </div>
 </section>
@@ -93,6 +93,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if (!empty($error)): ?>
             <p class="form-error"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
+
+        <h2>Vyplňte formulár</h2>
 
         <form action="index.php?page=produkt_pridat" method="post" enctype="multipart/form-data" class="admin-form">
             <p>

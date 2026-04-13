@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <section class="page-hero">
-    <div class="container">
+    <div class="container hero-content">
         <h1>Upraviť produkt</h1>
         <p>Upravte údaje produktu a uložte zmeny.</p>
     </div>

@@ -1,6 +1,6 @@
 <section class="page-hero katalog-hero"> 
-    <div class="container">
-        <h1>Katalóg nábytku</h1>
+    <div class="container hero-content">
+        <h2>Katalóg nábytku</h2>
         <p>Vyberte si z našej ponuky ručne vyrábaného nábytku z masívu.</p>
     </div>
 </section>
@@ -48,7 +48,7 @@ $result = $conn->query($sql);
 
 <section class="section">
     <div class="container">
-
+        <h2>Filtrovanie a zoznam produktov</h2>
         <form method="GET" class="sort-form" style="margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
             <input type="hidden" name="page" value="katalog">
 

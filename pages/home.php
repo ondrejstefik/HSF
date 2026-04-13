@@ -1,6 +1,6 @@
 <section class="hero home-hero">
     <div class="container hero-content">
-        <h1>Ručne vyrábaný nábytok z masívu</h1>
+        <h2>Ručne vyrábaný nábytok z masívu</h2>
         <p>Objavte poctivý slovenský nábytok, ktorý spája remeslo, prírodné materiály a možnosť individuálneho výberu moridla.</p>
         <div class="hero-buttons">
             <a href="index.php?page=katalog" class="btn">Pozrieť katalóg</a>

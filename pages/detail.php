@@ -10,8 +10,8 @@ $produkt = $result->fetch_assoc();
 if (!$produkt):
 ?>
 <section class="section">
-    <div class="container">
-        <h1>Produkt nebol nájdený</h1>
+    <div class="container hero-content">
+        <h2>Produkt nebol nájdený</h2>
         <p>Požadovaný produkt neexistuje alebo už nie je aktívny.</p>
         <a href="index.php?page=katalog" class="btn">Späť do katalógu</a>
     </div>
@@ -30,8 +30,8 @@ else:
     $moridlaResult = $moridlaStmt->get_result();
 ?>
 <section class="page-hero">
-    <div class="container">
-        <h1><?= htmlspecialchars($produkt['nazov']) ?></h1>
+    <div class="container hero-content">
+        <h2><?= htmlspecialchars($produkt['nazov']) ?></h2>
         <p><?= htmlspecialchars($produkt['kratky_popis']) ?></p>
     </div>
 </section>

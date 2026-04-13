@@ -1,6 +1,6 @@
 <section class="page-hero realization-hero">
-    <div class="container">
-        <h1>Filozofia značky HSF</h1>
+    <div class="container hero-content">
+        <h2>Filozofia značky HSF</h2>
         <p>Poctivé remeslo, kvalitné materiály a dôraz na detail v každom výrobku.</p>
     </div>
 </section>
