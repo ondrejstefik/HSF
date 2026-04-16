@@ -24,8 +24,8 @@ if (!empty($_SESSION['admin_logged_in'])) {
     $_SESSION['last_activity'] = time();
 }
 
-// $baseUrl = '/HSF/';
-$baseUrl = '/';
+$baseUrl = '/HSF/';
+// $baseUrl = '/';
 require_once 'includes/db.php';
 
 $page = $_GET['page'] ?? 'home';
