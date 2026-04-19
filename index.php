@@ -39,6 +39,7 @@ $allowedPages = [
     'produkt_upravit',
     'produkt_zmazat',
     'produkt_aktivovat',
+    'produkt_deaktivovat',
     'login',
     'logout',
     'onas',
@@ -107,6 +108,10 @@ switch ($page) {
     case 'produkt_aktivovat':
         include 'pages/produkt_aktivovat.php';
         break;
+
+    case 'produkt_deaktivovat':
+    include 'pages/produkt_deaktivovat.php';
+    break;
 
     case 'login':
         include 'pages/login.php';

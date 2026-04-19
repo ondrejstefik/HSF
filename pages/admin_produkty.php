@@ -60,7 +60,7 @@ $result = $conn->query($sql);
                                     <a href="index.php?page=produkt_upravit&id=<?= (int) $produkt['id'] ?>">Upraviť</a>
                                     |
                                   <?php if ((int)$produkt['aktivny'] === 1): ?>
-                                <a href="index.php?page=produkt_zmazat&id=<?= (int)$produkt['id'] ?>"
+                                <a href="index.php?page=produkt_deaktivovat&id=<?= (int)$produkt['id'] ?>"
                                 onclick="return confirm('Naozaj chcete deaktivovať tento produkt?');">
                                     Deaktivovať
                                 </a> 
